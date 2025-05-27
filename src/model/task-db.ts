@@ -12,7 +12,6 @@ const pool = new Pool({
   port: Number(process.env.DB_PORT) || 5432,
 });
 
-// Crea la tabla si no existe
 export async function initTaskTable() {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS tasks (

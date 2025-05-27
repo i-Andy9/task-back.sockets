@@ -28,8 +28,7 @@ const TaskController = {
     try {
       console.info("Create Task...");
       const newTask = await createTask(titulo, descripcion);
-      io.emit("newTask", newTask); // WebSocket: notifica a todos los clientes
-      // Emitir la lista completa actualizada
+      io.emit("newTask", newTask);
       const allTasks = await getAllTasks();
       io.emit("allTasks", allTasks);
       res.status(201).json({ msg: "Task created", newTask });
@@ -55,8 +54,7 @@ const TaskController = {
     try {
       console.info(`Update Task ${id} status to ${status}...`);
       const updatedTask = await updateTaskStatus(+id, status);
-      io.emit("taskUpdated", { id: +id, status }); // WebSocket: notifica a todos los clientes
-      // Emitir la lista completa actualizada
+      io.emit("taskUpdated", { id: +id, status });
       const allTasks = await getAllTasks();
       io.emit("allTasks", allTasks);
       res.status(200).json({ msg: "Task status updated", updatedTask });
@@ -75,8 +73,7 @@ const TaskController = {
     try {
       console.info(`Delete Task ${id}...`);
       await deleteTask(+id);
-      io.emit("taskDeleted", { id: +id }); // WebSocket: notifica a todos los clientes
-      // Emitir la lista completa actualizada
+      io.emit("taskDeleted", { id: +id });
       const allTasks = await getAllTasks();
       io.emit("allTasks", allTasks);
       res.status(200).json({ msg: "Task deleted" });

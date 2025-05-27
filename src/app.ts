@@ -20,7 +20,7 @@ import { initTaskTable } from "./model/task-db";
 app.get("/", checkHealth);
 app.use("/api", taskRouter);
 
-// Inicializa la tabla de tareas al iniciar la app
+// initialize the database table for tasks
 initTaskTable()
   .then(() => {
     console.log("Tabla 'tasks' verificada/creada correctamente.");
@@ -29,7 +29,7 @@ initTaskTable()
     console.error("Error al crear/verificar la tabla 'tasks':", err);
   });
 
-// Exporta io para usarlo en los controladores
+// weboscket connection
 export { io };
 
 io.on("connection", (socket) => {
