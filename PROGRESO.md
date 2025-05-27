@@ -12,11 +12,11 @@
 - ✔️ Docker Compose para la base de datos
 - ✔️ Endpoint DELETE /api/tasks/:id para eliminar una tarea
 - ✔️ Integración de WebSockets para notificaciones en tiempo real
+- ✔️ Endpoint de health check documentado
+- ✔️ Poblar la base de datos con tareas de ejemplo
 
 ### Pendientes:
 
-- ⬜ Endpoint de health check documentado
-- ⬜ Poblar la base de datos con tareas de ejemplo (opcional)
 - ⬜ (Opcional) Frontend básico o instrucciones para probar WebSockets
 
 ---
@@ -30,9 +30,9 @@
 - ✔️ Carga de variables de entorno con dotenv
 - ✔️ Conexión y pool de PostgreSQL funcionando
 - ✔️ Configuración de WebSockets (socket.io)
+- ✔️ Documentación en README sobre cómo levantar y probar el proyecto
 
 ### Por hacer:
 
 - ⬜ Docker Compose para levantar también la app (si se desea)
-- ⬜ Documentación en README sobre cómo levantar y probar el proyecto
 - ⬜ Manejo de errores más detallado en los endpoints

@@ -32,6 +32,19 @@ Sistema de lista de tareas pendientes (To-Do List) en tiempo real. Permite crear
 
 ## Instalación y uso
 
+Puedes usar **npm** o **yarn** para instalar dependencias y ejecutar scripts. No hay problema si se mezclan, pero se recomienda usar solo uno para evitar confusión con los archivos de lock.
+
+- Si usas npm:
+  ```sh
+  npm install
+  npm run dev
+  ```
+- Si usas yarn:
+  ```sh
+  yarn install
+  yarn dev
+  ```
+
 1. Clona el repositorio y entra a la carpeta del proyecto.
 2. Instala dependencias:
    ```sh
